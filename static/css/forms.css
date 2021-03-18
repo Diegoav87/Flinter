@@ -1,0 +1,75 @@
+:root {
+  --darkBlue: #004e64;
+  --lightBlue: #00a5cf;
+  --lightGreen: #9fffcb;
+  --medialGreen: #25a18e;
+  --cozyGreen: #7ae582;
+  --lightGrey: #ededed;
+}
+
+.background {
+  background-color: var(--lightGrey);
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.form-container {
+  color: var(--medialGreen);
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+}
+
+.register-container {
+  color: var(--medialGreen);
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+}
+
+.input-form-group {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.form-input {
+  background-color: white;
+  border: none;
+  padding: 0;
+  border-bottom: 2px solid var(--medialGreen);
+  width: 100%;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.submit-btn {
+  background-color: white;
+  border: 3px solid var(--medialGreen);
+  padding: 10px;
+  color: var(--medialGreen);
+  width: 100%;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: var(--medialGreen);
+  color: white;
+}
+
+.register-btn {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}

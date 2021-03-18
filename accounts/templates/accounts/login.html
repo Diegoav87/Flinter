@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include "navbar.html" %}
+<div class="background">
+    <div class="form-container">
+        <h1 class="mb-4">INICIAR SESIÓN</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label for="username">Nombre de Usuario</label>
+                <input class="form-input" type="text" name="username">
+            </div>
+            <div class="mb-4">
+                <label for="password">Contraseña</label>
+                <input class="form-input" type="password" name="password">
+            </div>
+            <button class="submit-btn" type="submit">INICIAR SESIÓN</button>
+            <p class="mt-4">No tienes cuenta? <a href="{% url 'accounts:register' %}">Registrarse</a></p>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include "navbar.html" %}
+<div class="background">
+<div class="register-container">
+    <h1 class="mb-4">Registrarse</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="row mb-4">
+            <div class="col">
+                {{form.username.label}}
+                {{form.username}}
+            </div>
+            <div class="col"> 
+                {{form.email.label}}
+                {{form.email}}
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col">
+                {{form.password1.label}}
+                {{form.password1}}
+            </div>
+            <div class="col"> 
+                {{form.password2.label}}
+                {{form.password2}}
+            </div>
+        </div>
+        
+        {{form.errors}}
+        <button type="submit" class="submit-btn register-btn">Registrarse</button>
+        <p class="mt-4">Ya tienes una cuenta? <a href="{% url 'accounts:login' %}">Iniciar Sesión</a></p>
+    </form>
+</div>
+</div>
+
+{% endblock %}
